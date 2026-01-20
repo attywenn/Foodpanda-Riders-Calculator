@@ -3,76 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Pandarider Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="style.css">
     <script src="https://quge5.com/88/tag.min.js" data-zone="203761" async data-cfasync="false"></script>
-    <script src="script.js"></script>
-    <title>Pandarider Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img class="title-img" src="logo.webp" alt="">
-        <div class="head-text">
-            <div class="header-title">Pandarider Calculator</div>
-            <div class="header-subtitle">Don't forget to return your remittance!</div>
-        </div>    
-    </header>
+    <div class="container">
+        <header>
+            <img src="logo.webp" alt="" class="logo-container">
+            <div class="head-text">
+                <div class="header-title">Pandarider Calculator</div>
+                <div class="header-subtitle">Don't forget to return your remittance!</div>
+            </div>    
+        </header>
 
-    <div class="title-outline">
         <div class="title-section">
             <div class="title">Count your earnings!</div>
+            <div class="subtitle">Calculate your daily remittance in seconds</div>
         </div>
 
         <div class="input-section">
-            <label for="">Amount in wallet</label>
-            <input type="number" placeholder="Remittance" name="remittance" id="remittance">
-            <label for="payment">Total Earnings (this day)</label>
-            <input type="number" placeholder="Payment" name="payment" id="payment">
-            <button class="calculate" onclick="count()">Calculate</button>
-        </div>
-
-    </div>
-    <div class="final-output">
-        <div class="total">
-            <div class="remit-total">
-                <div class="remit-label">Remittance: </div> 
-                <div class="remit" id="remit"></div>
-            </div>    
-        
-            <div class="earnings">
-                <div class="earn">Total Earnings: </div>
-                <div class="total-earn" id="earn"></div>
+            <div class="input-group">
+                <label for="remittance">Amount in wallet</label>
+                <input type="number" placeholder="Enter your wallet amount" name="remittance" id="remittance">
             </div>
-
-            <div class="error"></div>
-        </div>
-    </div>
-
-    <div class="guide">
-        <div class="wallet">
-            <div class="wallet-label">Para alamin kung magkano ang laman ng wallet, </div>
-            <div class="wallet-label">Tingnan dito</div>
-            <img class="img-wallet" src="wallet.jpeg" alt="">
+            <div class="input-group">
+                <label for="payment">Total Earnings (this day)</label>
+                <input type="number" placeholder="Enter your total earnings" name="payment" id="payment">
+            </div>
+            <button class="calculate" id="calculateBtn">Calculate</button>
+            <div class="error-message" id="errorMessage"></div>
         </div>
 
-        <div class="earn-guide">
-            <div class="earn-label">Para malaman kung magkano ang iyong kinita ngayong araw, </div>
-            <div class="earn-label">Tingnan dito</div>
-            <img src="payment.jpeg" alt="" class="img-earn">
+        <div class="final-output">
+            <div class="result-card">
+                <div class="result-label">Remittance:</div>
+                <div class="result-value remit-value" id="remit">PHP 0.00</div>
+            </div>
+            <div class="result-card">
+                <div class="result-label">Total Earnings:</div>
+                <div class="result-value earn-value" id="earn">PHP 0.00</div>
+            </div>
+        </div>
+
+        <div class="guide">
+            <div class="guide-card">
+                <div class="guide-title">
+                    <div class="guide-icon">1</div>
+                    <span>Wallet Amount Guide</span>
+                </div>
+                <div class="guide-content">
+                    <div class="guide-text">To find your wallet amount, check your Foodpanda rider app dashboard.</div>
+                    <img class="guide-image" src="wallet.jpeg" alt=""></img>
+                </div>
+            </div>
+            
+            <div class="guide-card">
+                <div class="guide-title">
+                    <div class="guide-icon">2</div>
+                    <span>Earnings Guide</span>
+                </div>
+                <div class="guide-content">
+                    <div class="guide-text">Your total earnings for the day can be found in your daily summary.</div>
+                    <img src="payment.png" alt="" class="guide-image">
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-panel">
-            <div class="footer-title">Pandarider Calculator</div>
-            <div class="footer-note">© 2026. All rights reserved</div>
-            <div class="footer-note">Bought by Daddy_0ne</div>
-        </div>
+        <div class="footer-title">Pandarider Calculator</div>
+        <div class="footer-note">© 2026. All rights reserved</div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
