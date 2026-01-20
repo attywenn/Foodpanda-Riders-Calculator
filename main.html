@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Pandarider Calculator</title>
+</head>
+<body>
+    <header>
+        <img class="title-img" src="logo.webp" alt="">
+        <div class="head-text">
+            <div class="header-title">Pandarider Calculator</div>
+            <div class="header-subtitle">Don't forget to return your remittance!</div>
+        </div>    
+    </header>
+
+    <div class="title-outline">
+        <div class="title-section">
+            <div class="title">Count your earnings!</div>
+        </div>
+
+        <div class="input-section">
+            <label for="">Amount in wallet</label>
+            <input type="number" placeholder="Remittance" name="remittance" id="remittance">
+            <label for="payment">Total Earnings (this day)</label>
+            <input type="number" placeholder="Payment" name="payment" id="payment">
+            <button class="calculate" onclick="count()">Calculate</button>
+        </div>
+
+    </div>
+    <div class="final-output">
+        <div class="total">
+            <div class="remit-total">
+                <div class="remit-label">Remittance: </div> 
+                <div class="remit" id="remit"></div>
+            </div>    
+        
+            <div class="earnings">
+                <div class="earn">Total Earnings: </div>
+                <div class="total-earn" id="earn"></div>
+            </div>
+
+            <div class="error"></div>
+        </div>
+    </div>
+
+    <div class="guide">
+        <div class="wallet">
+            <div class="wallet-label">Para alamin kung magkano ang laman ng wallet, </div>
+            <div class="wallet-label">Tingnan dito</div>
+            <img class="img-wallet" src="wallet.jpeg" alt="">
+        </div>
+
+        <div class="earn-guide">
+            <div class="earn-label">Para malaman kung magkano ang iyong remittance, </div>
+            <div class="earn-label">Tingnan dito</div>
+            <img src="payment.jpeg" alt="" class="img-earn">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-panel">
+            <div class="footer-title">Pandarider Calculator</div>
+            <div class="footer-note">© 2026. All rights reserved</div>
+            <div class="footer-note">Contributed by Wency Herrera</div>
+            <div class="footer-note">Serve the people!</div>
+        </div>
+    </footer>
+</body>
+</html>
